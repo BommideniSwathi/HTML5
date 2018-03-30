@@ -1,0 +1,162 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript" src="javascript/validations.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Event Registration</title>
+<script>
+function validation_register()
+	{  
+	var ename = document.eventregister.regname.value;
+	var alpha = /^[a-zA-Z]+$/;
+    {
+	if(ename==null || ename=="")
+	{
+	alert ("please enter your name");
+	return false;
+}
+   if(!ename.match(alpha))
+   {
+   alert("Invalid name(it should contains only alphabets)");
+ }
+ }
+	var age1= document.eventregister.age.value;
+	var num=/^[1-9]?[0-9]{1}$|^80$/; 
+	{
+	if(age1==null || age1=="")
+	{
+	alert("please enter age");
+	return false;
+	}
+	 if(!age1.match(num))
+	 {
+	 alert("Age should contain only two digit Number ");
+	 return false;
+	 }
+	
+	if ( age1 < 18 || age1 > 80 )
+	{ 
+	alert("The age must be a number between 18 and 80");
+	return false;
+	}
+	}
+	var email1=document.eventregister.email.value;
+	var atposition=email1.indexOf("@");
+	var dotposition=email1.lastIndexOf(".");
+  if (email1==null || email1=="" || atposition<1 || dotposition<atposition+2 || dotposition+2>=email1.length)
+	{
+	alert("please enter a valid e-mail address");
+	return false;
+	}
+	
+	var eloc=document.eventregister.loc.value;
+	if(eloc==0)
+	{
+	alert("Please select your location from the list");
+	return false;
+	}
+
+	
+} 
+
+</script>
+ <style>
+ body
+ {
+ background-image:url("http://paper-backgrounds.com/textureimages/2012/06/pen-on-table-vintage-background-hd.jpg");
+ 
+ background-repeat: no-repeat;
+ }
+ 
+.jumbotron {
+	background:lightgrey;
+	padding: 10px;
+	text-shadow: 4px 4px 4px rgba(147, 180, 189, 0.8);
+	color: midnightblue;
+	 margin-bottom: 0;
+}
+button
+  { 
+  background-color:#4CAF50;
+  padding:12px 14px;
+  border:1Px solid #cc;
+  cursor:pointer;
+ }  
+p1{
+   border:1px solid rgba(147 ,108, 189, 0.8);
+   padding: 12px 4% 10px 4%;
+   position:absolute;
+   box-shadow: 0pt 2px 5px rgba(105,108,109,0.7),
+               0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset; 
+   border-radius:65px;
+   } 
+    .container-fluid {
+    padding: 60px;
+} 
+p
+{
+text-shadow: 4px 4px 4px rgba(147, 180, 189, 0.8);
+	color: midnightblue;
+}
+ 
+</style>
+</head>
+
+<body>
+<form name="eventregister" onsubmit="validation_register()">
+<div class="jumbotron text-center">
+<h1>Welcome TO Xena Events</h1></br>
+<h3></h3>
+</div>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-5">
+ </div>
+ <div class="col-sm-6">
+<p1><center><table class="table" cellspacing="20" align="center">
+<center><h4><b><p>Event Registration</p></b></h4></center>
+<tr>
+<td><b>NAME<font color="red">*</font></b></td> 
+<td><input type="text" name="regname" autofocus/></td>
+</tr>
+
+
+<tr>
+<td><b>AGE<font color="red">*</font></b></td>
+<td><input type="text" name="age"/></td>
+</tr>
+
+
+ <tr>
+<td><b>EMAIL-ID<font color="red">*</font></b></td>
+<td><input type="text" name="email"/></td>
+</tr>
+
+<tr>
+<td><b>CITY<font color="red">*</font></b></td>
+<td><select  name="loc" >
+    <option value="0">Select the Location</option>
+   <option>Rajkot</option>
+   <option>Vizag</option>
+   <option>Bangalore</option>
+   </select></td>
+   </tr>
+   <tr>
+   <td></td>
+   <td><button type="submit" name="submit"/><b>SUBMIT</b></td>
+   </tr>
+   </table></center></p1>
+   
+   </div>
+   </div>
+   <div class="col-sm-3">
+   </div>
+    </div>
+</form>
+</body>
+
+</html> 
