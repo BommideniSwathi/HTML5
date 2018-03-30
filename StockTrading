@@ -1,0 +1,111 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript" src="javascript/validations.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Stock Trading</title>
+<script>
+      function Stock_Trading()
+	  {
+	var Qua1 = document.stocktrading.quantity.value;
+	var Qua = /^[1-9]?[0-9]{1}$|^100$/;
+	var Qua =/^10^20^30^40^50^60^70^80^90$/;
+	{
+	if(Qua1== null || Qua1=="")
+	{
+	  alert("enter shares/stocks in Quantity box");
+	  return false;
+	}
+	
+	 if(!Qua1.match(Qua) || Qua1 < 10 || Qua1 > 100 )
+	 {
+	 alert("Shares should contain only Numbers in block of 10s (ie 10 shares, 20 shares, 30 shares…");
+	 return false;
+	 }
+	}
+	}
+</script>
+
+<style>
+ body
+ {
+ background-image:url("http://paper-backgrounds.com/textureimages/2012/06/pen-on-table-vintage-background-hd.jpg");
+ 
+ background-repeat: no-repeat;
+ }
+table, th, td {
+    border: 2px solid black;
+	
+}
+button
+  { 
+  background-color:#4CAF50;
+  padding:12px 14px;
+  border:1Px solid #cc;
+  cursor:pointer;
+ }  
+</style>
+
+</head>
+
+<body>
+<form name="stocktrading" onsubmit="Stock_Trading()">
+<div class="jumbotron text-center">
+<h1>Stock Trading</h1></br>
+</div>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-5">
+ </div>
+ <div class="col-sm-6">
+ 
+<table class="table" cellspacing="10" align="center"> 
+  <tr>
+    <th><h4><b>TICKER</b></h4></th>
+    <th><h4><b>PRICE</b></h4></th>
+  </tr>
+  <tr>
+    <td>WIPRO</td>
+    <td>298.45</td>
+  </tr>
+  <tr>
+    <td>INFY</td>
+    <td>949.95</td>
+  </tr>
+  <tr>
+    <td>TCS</td>
+    <td>2713.70</td>
+  </tr>
+  <tr>
+    <td>TECHM</td>
+    <td>485.85</td>
+  </tr>
+</table>
+</br>
+</br>
+
+<table class="table" align="center"  cellspacing="10">
+<tr>
+<td><b>Ticker:</b></td>
+<td><input type="text" name="ticker" autofocus/></td>
+</tr>
+<tr>
+<td><b>Quantity:</b></td>
+<td><input type="text" name="quantity" step="10" min="0" max="100"/></td>
+</tr>
+<tr>
+<td></td>
+<td><button type="SUBMIT" name="submit"/><b>SUBMIT</b></td>
+</tr>
+</table>
+
+</div>
+<div class="col-sm-3">
+</div>
+</form>
+
+</body>
+</html>
