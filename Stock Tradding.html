@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+
+}
+
+td, th {
+   border: 3px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+input:invalid+span:after {
+  content: 'Incorrect';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  content: 'Correct';
+  padding-left: 5px;
+}
+
+</style>
+</head>
+<body style="background-color:LightGray;">
+
+<table align="center">
+  <tr>
+    <th>TICKER</th>
+    <th>PRICE</th>
+  </tr>
+  <tr>
+    <td>WIPRO</td>
+    <td>298.45</td>
+  </tr>
+  <tr>
+    <td>INFY</td>
+    <td>949.95</td>
+  </tr>
+  <tr>
+    <td>TCS</td>
+    <td>2713.70</td>
+  </tr>
+  <tr>
+    <td>TECHM</td>
+    <td>485.85</td>
+  </tr>
+</table>
+
+<center><h1>STOCK TRADING</h1></center>
+</br>
+<table align="center">
+<form action="Stock Tradding2.html">
+  <div>
+  <tr>
+    <th>TICKER</th>
+    <th>PRICE</th>
+  </tr>
+<tr>
+           <td>Ticker :</td>
+            <td>
+            <input type="text" name="tick">
+        </td>
+</tr>
+<tr>
+           <td>Quantity :</td>
+            <td>
+            <input type="number" name="qua" step="10" min="10" max="100" required>
+        </td>
+</tr>
+<span class="validity"></span>
+</div>
+ <div>
+<tr>
+         <td>
+      <input type="submit"  value="SUBMIT">
+         
+         </td>
+</tr>
+ </div>
+</table>
+</body>
+</html>

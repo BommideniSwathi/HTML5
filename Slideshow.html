@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body bgcolor="#7FFFD4">
+
+<h1 class="w3-center">Awesome Online Images</h1>
+
+<div class="w3-content w3-display-container">
+ <img class="mySlides" src="http://diarioveaonline.com/wp-content/uploads/2018/01/beautiful-unique-wallpapers-for-desktop-0.jpg" style="width:100%">
+  <img class="mySlides" src="https://wallpaper.wiki/wp-content/uploads/2017/05/Beautiful-blooming-unique-flower.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.hdwallback.net/wp-content/uploads/2018/03/Unique-And-Beautiful-Wallpaper-HD-Images-680x425.jpg" style="width:100%">
+  <img class="mySlides" src="https://i2.wp.com/4hdwall.com/wp-content/uploads/2017/12/Best-flower-Wallpaper.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>

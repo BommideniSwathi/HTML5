@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	animationEnabled: true,
+	title:{
+		text: "Agricultural Statistical Department of GOI" 
+	}, 
+	axisX: {
+		interval: 1,
+                                       title: "Year",
+		intervalType: "year",
+		valueFormatString: "YYYY"
+	},
+	axisY:{
+		title: "Values(in lakh tonnes)",
+		valueFormatString: "#100"
+                                        
+	},
+	data: [{        
+		type: "line",
+		markerSize: 12,
+		xValueFormatString: "YYYY",
+		yValueFormatString: "###",
+		dataPoints: [        
+			{ x: new Date(2001, 00, 1), y: 281,  markerType: "triangle",  markerColor: "#6B8E23" },
+                                                             { x: new Date(2002, 00, 2), y: 277, markerType: "triangle",  markerColor: "#6B8E23" },
+			{ x: new Date(2003, 00, 3), y: 275,  markerType: "triangle",  markerColor: "#6B8E23" },
+			{ x: new Date(2004, 00, 4), y: 457,  markerType: "triangle",  markerColor: "#6B8E23" },
+			{ x: new Date(2005, 00, 5), y: 200,  markerType: "triangle",  markerColor: "#6B8E23" },
+			{ x: new Date(2006, 00, 6), y: 280,  markerType: "triangle",  markerColor: "#6B8E23" },
+			{ x: new Date(2007, 00, 7), y: 150,  markerType: "triangle",  markerColor: "#6B8E23" }
+			
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body bgcolor="#FFA500">
+
+<div id="chartContainer" style="width: 100%; height: 700px;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>
